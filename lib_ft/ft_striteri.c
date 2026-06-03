@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjulya-c <tjulya-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: thaisfuzita <thaisfuzita@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/28 16:33:45 by tjulya-c          #+#    #+#             */
-/*   Updated: 2026/05/28 16:45:30 by tjulya-c         ###   ########.fr       */
+/*   Created: 2026/05/28 16:12:04 by tjulya-c          #+#    #+#             */
+/*   Updated: 2026/06/02 21:28:59 by thaisfuzita      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_putnbr_fd(int n, int fd)
+void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-    long int nbr;
-    char x;
+    unsigned int i;
 
-    nbr = n;
-    if (n < 0)
+    i = 0;
+    if (!s || !f)
+        return;
+    while (s[i])
     {
-        nbr = -nbr;
-        write(fd, "-", 1);
+        f(i, &s[i]);
+        i++;
     }
-    if (nbr >= 10)
-        ft_putnbr_fd(nbr / 10, fd);
-    x = (nbr % 10) + '0';
-    write(fd, &x, 1);
 }

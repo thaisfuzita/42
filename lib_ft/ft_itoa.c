@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjulya-c <tjulya-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: thaisfuzita <thaisfuzita@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 16:17:19 by tjulya-c          #+#    #+#             */
-/*   Updated: 2026/05/28 16:00:22 by tjulya-c         ###   ########.fr       */
+/*   Updated: 2026/06/02 21:25:28 by thaisfuzita      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ char *ft_itoa(int n)
     if (!number)
         return (NULL);
     nbr = n;
+    number[qnt] = '\0';
     if (n < 0)
     {
         nbr = -nbr;
@@ -50,13 +51,12 @@ char *ft_itoa(int n)
     }
     if (nbr == 0)
         number[0] = '0';
-    number[qnt] = '\0';
+    
     while (nbr > 0)
     {
         number[qnt - 1] = nbr % 10 + '0';
         nbr = nbr / 10;
         qnt--;
     }
-    
     return (number);
 }

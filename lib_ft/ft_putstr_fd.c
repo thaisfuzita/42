@@ -1,16 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjulya-c <tjulya-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: thaisfuzita <thaisfuzita@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/28 16:19:53 by tjulya-c          #+#    #+#             */
-/*   Updated: 2026/05/28 16:27:40 by tjulya-c         ###   ########.fr       */
+/*   Created: 2026/05/28 16:25:25 by tjulya-c          #+#    #+#             */
+/*   Updated: 2026/06/02 21:29:49 by thaisfuzita      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_putchar_fd(char c, int fd)
+void ft_putstr_fd(char *s, int fd)
 {
-    write(fd, &c, 1);
+    int i;
+
+    if (!s)
+        return;
+    i = 0;
+    while (s[i])
+    {
+        write(fd, &s[i], 1);
+        i++;
+    }
 }

@@ -3,58 +3,46 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjulya-c <tjulya-c@student.42.fr>          +#+  +:+       +#+        */
+/*   By: thaisfuzita <thaisfuzita@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 14:36:49 by tjulya-c          #+#    #+#             */
-/*   Updated: 2026/06/01 16:59:50 by tjulya-c         ###   ########.fr       */
+/*   Updated: 2026/06/02 13:31:19 by thaisfuzita      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	isinset(char const *s, char a)
+int isinset(char c, char const *set)
 {
-	int	i;
-	
-	i = 0;
-	while (s[i])
-	{
-		if (s[i] == a)
-			return (1);
-		i++;
-	}
-	return (0);
-}
+    int i;
 
+    i = 0;
+    while (set[i])
+    {
+        if (set[i] == c)
+            return (1);
+        i++;
+    }
+    return (0);
+}
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		i;
-	int		j;
-	int		x;
-	int		size;
-	char	*string;
-
-	if (!s1 || !set)
-		return (NULL);
-	i = 0;
-	while (s1[i] && isinset(set, s1[i]) == 1)
-		i++;
-	if (s1[i] == '\0')
-		size = 1;
-	else
-	{
-		j = strlen(s1) - 1;
-		while (s1[j] && isinset(set, s1[j]) == 1)
-			j--;
-		size = j - i + 2;
-	}
-	string = malloc((size) * sizeof(char));
-	if (!string)
-		return (NULL);
-	x = 0;
-	while (x < size - 1)
-	{
-		string[x] = s1[i + x];
-		x++;
-	}
-	string[x] = '\0';
-	return (string);
+    int i;
+    int j;
+    int len;
+    char    *string;
+    
+    if (!s1 || !set)
+        return (NULL);
+    i = 0;
+    while (isinset(s1[i], set))
+        i++;
+    len = ft_strlen(s1);
+    j = len - 1;
+    while (isinset(s1[j], set) && j >= i)
+        j--;
+    len = (j - i) + 1;
+    if (len <= 0)
+        string = ft_strdup("");
+    else
+        string = ft_substr(s1, i, len);
+    return (string);
 }
