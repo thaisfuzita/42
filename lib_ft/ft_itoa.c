@@ -51,7 +51,7 @@ char *ft_itoa(int n)
     }
     if (nbr == 0)
         number[0] = '0';
-    
+    number[qnt] = '\0';
     while (nbr > 0)
     {
         number[qnt - 1] = nbr % 10 + '0';
