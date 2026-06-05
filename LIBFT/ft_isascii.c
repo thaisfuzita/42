@@ -6,11 +6,13 @@
 /*   By: tjulya-c <tjulya-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 17:29:53 by tjulya-c          #+#    #+#             */
-/*   Updated: 2026/06/01 15:18:04 by tjulya-c         ###   ########.fr       */
+/*   Updated: 2026/06/03 14:10:24 by tjulya-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	isascii(int c)
+#include "libft.h"
+
+int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 		return (1);

@@ -6,14 +6,16 @@
 /*   By: tjulya-c <tjulya-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 17:34:48 by tjulya-c          #+#    #+#             */
-/*   Updated: 2026/06/01 16:21:55 by tjulya-c         ###   ########.fr       */
+/*   Updated: 2026/06/03 14:26:35 by tjulya-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strnstr(const char *big, const char *little, size_t len)
+#include "libft.h"
+
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int	i;
-	int	j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	if (little[0] == '\0')

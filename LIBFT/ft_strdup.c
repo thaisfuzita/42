@@ -6,11 +6,13 @@
 /*   By: tjulya-c <tjulya-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 17:34:33 by tjulya-c          #+#    #+#             */
-/*   Updated: 2026/06/01 16:25:05 by tjulya-c         ###   ########.fr       */
+/*   Updated: 2026/06/03 14:11:20 by tjulya-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strdup(const char *s)
+#include "libft.h"
+
+char	*ft_strdup(const char *s)
 {
 	char	*str;
 	int		i;

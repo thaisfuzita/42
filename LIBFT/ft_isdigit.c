@@ -6,11 +6,13 @@
 /*   By: tjulya-c <tjulya-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 17:30:00 by tjulya-c          #+#    #+#             */
-/*   Updated: 2026/06/01 15:10:55 by tjulya-c         ###   ########.fr       */
+/*   Updated: 2026/06/03 14:10:27 by tjulya-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	isdigit(int c)
+#include "libft.h"
+
+int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 		return (1);

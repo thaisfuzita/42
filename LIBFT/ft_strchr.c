@@ -6,19 +6,20 @@
 /*   By: tjulya-c <tjulya-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 17:34:29 by tjulya-c          #+#    #+#             */
-/*   Updated: 2026/06/01 15:56:01 by tjulya-c         ###   ########.fr       */
+/*   Updated: 2026/06/03 14:33:49 by tjulya-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strchr(const char *s, int c)
+#include "libft.h"
+
+char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 
 	i = 0;
-	while (s[i] != '\0' && s[i] != c)
+	while (s[i] != '\0' && s[i] != (char)c)
 		i++;
-	if (s[i] == c)
+	if (s[i] == (char)c)
 		return ((char *)(&s[i]));
-	else
-		return (NULL);
+	return (NULL);
 }

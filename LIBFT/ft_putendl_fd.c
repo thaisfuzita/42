@@ -6,14 +6,16 @@
 /*   By: tjulya-c <tjulya-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/28 16:28:01 by tjulya-c          #+#    #+#             */
-/*   Updated: 2026/05/28 16:33:19 by tjulya-c         ###   ########.fr       */
+/*   Updated: 2026/06/03 14:05:39 by tjulya-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_putendl_fd(char *s, int fd)
+#include "libft.h"
+
+void	ft_putendl_fd(char *s, int fd)
 {
-    if (!s)
-        return;
-    ft_putstr_fd(s, fd);
-    ft_putchar_fd('\n', fd);
+	if (!s)
+		return ;
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }

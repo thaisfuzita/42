@@ -6,11 +6,13 @@
 /*   By: tjulya-c <tjulya-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 17:34:54 by tjulya-c          #+#    #+#             */
-/*   Updated: 2026/06/01 16:03:31 by tjulya-c         ###   ########.fr       */
+/*   Updated: 2026/06/03 14:11:49 by tjulya-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strrchr(const char *s, int c)
+#include "libft.h"
+
+char	*ft_strrchr(const char *s, int c)
 {
 	size_t	i;
 

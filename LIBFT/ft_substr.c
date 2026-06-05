@@ -6,9 +6,11 @@
 /*   By: tjulya-c <tjulya-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 14:05:24 by tjulya-c          #+#    #+#             */
-/*   Updated: 2026/06/01 16:36:21 by tjulya-c         ###   ########.fr       */
+/*   Updated: 2026/06/03 14:27:02 by tjulya-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -16,7 +18,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 	size_t	size;
 
-	size = strlen(s);
+	size = ft_strlen(s);
 	if (start > size)
 		len = 0;
 	else if (size - start < len)

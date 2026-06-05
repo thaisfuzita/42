@@ -6,14 +6,16 @@
 /*   By: tjulya-c <tjulya-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 17:34:25 by tjulya-c          #+#    #+#             */
-/*   Updated: 2026/06/01 15:29:57 by tjulya-c         ###   ########.fr       */
+/*   Updated: 2026/06/03 14:24:09 by tjulya-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*memset(void *s, int c, size_t n)
+#include "libft.h"
+
+void	*ft_memset(void *s, int c, size_t n)
 {
-	int				i;
-	unsigned char	*p;
+	size_t				i;
+	unsigned char		*p;
 
 	p = (unsigned char *)s;
 	i = 0;

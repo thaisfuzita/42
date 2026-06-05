@@ -6,11 +6,13 @@
 /*   By: tjulya-c <tjulya-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 17:30:13 by tjulya-c          #+#    #+#             */
-/*   Updated: 2026/06/01 16:15:05 by tjulya-c         ###   ########.fr       */
+/*   Updated: 2026/06/03 14:10:51 by tjulya-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	memcmp(const void *s1, const void *s2, size_t n)
+#include "libft.h"
+
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t				i;
 	unsigned char		*one;

@@ -6,11 +6,13 @@
 /*   By: tjulya-c <tjulya-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 17:34:42 by tjulya-c          #+#    #+#             */
-/*   Updated: 2026/06/01 15:20:41 by tjulya-c         ###   ########.fr       */
+/*   Updated: 2026/06/03 14:11:35 by tjulya-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	strlen(const char *s)
+#include "libft.h"
+
+size_t	ft_strlen(const char *s)
 {
 	size_t	i;
 

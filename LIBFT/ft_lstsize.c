@@ -6,19 +6,21 @@
 /*   By: tjulya-c <tjulya-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/01 13:56:00 by tjulya-c          #+#    #+#             */
-/*   Updated: 2026/06/01 14:00:30 by tjulya-c         ###   ########.fr       */
+/*   Updated: 2026/06/03 14:05:12 by tjulya-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_lstsize(t_list *lst)
-{
-    int i;
+#include "libft.h"
 
-    i = 0;
-    while (lst != NULL)
-    {
-        i++;
-        lst = lst->next;
-    }
-    return (i);
+int	ft_lstsize(t_list *lst)
+{
+	int	i;
+
+	i = 0;
+	while (lst != NULL)
+	{
+		i++;
+		lst = lst->next;
+	}
+	return (i);
 }

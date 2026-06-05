@@ -6,11 +6,13 @@
 /*   By: tjulya-c <tjulya-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 17:29:29 by tjulya-c          #+#    #+#             */
-/*   Updated: 2026/06/01 16:31:28 by tjulya-c         ###   ########.fr       */
+/*   Updated: 2026/06/03 14:23:02 by tjulya-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*calloc(size_t nmemb, size_t size)
+#include "libft.h"
+
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	unsigned char	*x;
 	size_t			max;
@@ -21,6 +23,6 @@ void	*calloc(size_t nmemb, size_t size)
 	x = malloc(nmemb * size);
 	if (!x)
 		return (NULL);
-	bzero(x, nmemb * size);
+	ft_bzero(x, nmemb * size);
 	return (x);
 }
